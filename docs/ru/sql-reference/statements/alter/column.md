@@ -10,7 +10,7 @@ toc_title: "Манипуляции со столбцами"
 Синтаксис:
 
 ``` sql
-ALTER TABLE [db].name [ON CLUSTER cluster] ADD|DROP|RENAME|CLEAR|COMMENT|MODIFY|MATERIALIZE COLUMN ...
+ALTER TABLE [db].name [ON CLUSTER cluster] ADD|DROP|RENAME|CLEAR|COMMENT|{MODIFY|ALTER}|MATERIALIZE COLUMN ...
 ```
 
 В запросе можно указать сразу несколько действий над одной таблицей через запятую.

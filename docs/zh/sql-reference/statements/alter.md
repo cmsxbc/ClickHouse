@@ -13,7 +13,7 @@ toc_title: ALTER
 改变表结构：
 
 ``` sql
-ALTER TABLE [db].name [ON CLUSTER cluster] ADD|DROP|CLEAR|COMMENT|MODIFY COLUMN ...
+ALTER TABLE [db].name [ON CLUSTER cluster] ADD|DROP|CLEAR|COMMENT|{MODIFY|ALTER} COLUMN ...
 ```
 
 在语句中，配置一个或多个用逗号分隔的动作。每个动作是对某个列实施的操作行为。

@@ -26,6 +26,7 @@ bool ParserAlterCommand::parseImpl(Pos & pos, ASTPtr & node, Expected & expected
     ParserKeyword s_drop_column("DROP COLUMN");
     ParserKeyword s_clear_column("CLEAR COLUMN");
     ParserKeyword s_modify_column("MODIFY COLUMN");
+    ParserKeyword s_alter_column("ALTER COLUMN");
     ParserKeyword s_rename_column("RENAME COLUMN");
     ParserKeyword s_comment_column("COMMENT COLUMN");
     ParserKeyword s_materialize_column("MATERIALIZE COLUMN");
@@ -619,7 +620,7 @@ bool ParserAlterCommand::parseImpl(Pos & pos, ASTPtr & node, Expected & expected
                     return false;
                 }
             }
-            else if (s_modify_column.ignore(pos, expected))
+            else if (s_modify_column.ignore(pos, expected) || s_alter_column.ignore(pos, expected))
             {
                 if (s_if_exists.ignore(pos, expected))
                     command->if_exists = true;

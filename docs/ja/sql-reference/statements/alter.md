@@ -14,7 +14,7 @@ toc_title: ALTER
 テーブル構造の変更。
 
 ``` sql
-ALTER TABLE [db].name [ON CLUSTER cluster] ADD|DROP|CLEAR|COMMENT|MODIFY COLUMN ...
+ALTER TABLE [db].name [ON CLUSTER cluster] ADD|DROP|CLEAR|COMMENT|{MODIFY|ALTER} COLUMN ...
 ```
 
 クエリでは、コンマ区切りのアクションのリストを指定します。
